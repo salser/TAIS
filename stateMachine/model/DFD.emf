@@ -1,0 +1,28 @@
+@namespace(uri="http://www.example.org/DFD", prefix="DFD")
+package DFD;
+
+import "http://www.eclipse.org/emf/2003/XMLType";
+
+class Cliente {
+	val Pedido[*] pedido;
+	!unique !ordered readonly attr type.String nombre;
+	!ordered readonly attr type.Int ~id;
+}
+
+class Pedido {
+	val Articulo[*] articulo;
+	!ordered readonly attr type.Int ~id;
+	!unique !ordered readonly attr type.String descripcion;
+}
+
+class Articulo {
+	!ordered readonly attr type.Int ~id;
+	!unique !ordered readonly attr type.String descripcion;
+	ref Proveedor proveedor;
+}
+
+class Proveedor {
+	!ordered readonly attr type.Int ~id;
+	!unique !ordered readonly attr type.String nombre;
+}
+
