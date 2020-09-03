@@ -67,15 +67,6 @@ public interface DFDFactory extends EFactory {
 	Estado createEstado();
 
 	/**
-	 * Returns a new object of class '<em>Transicion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Transicion</em>'.
-	 * @generated
-	 */
-	Transicion createTransicion();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

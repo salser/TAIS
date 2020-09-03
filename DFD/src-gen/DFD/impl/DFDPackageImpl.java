@@ -9,7 +9,6 @@ import DFD.DFDPackage;
 import DFD.Estado;
 import DFD.Pedido;
 import DFD.Proveedor;
-import DFD.Transicion;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -61,13 +60,6 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 	 * @generated
 	 */
 	private EClass estadoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass transicionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -312,36 +304,6 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getTransicion() {
-		return transicionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTransicion_Anterior() {
-		return (EReference) transicionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTransicion_Siguirnte() {
-		return (EReference) transicionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public DFDFactory getDFDFactory() {
 		return (DFDFactory) getEFactoryInstance();
 	}
@@ -387,10 +349,6 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 		createEAttribute(proveedorEClass, PROVEEDOR__NOMBRE);
 
 		estadoEClass = createEClass(ESTADO);
-
-		transicionEClass = createEClass(TRANSICION);
-		createEReference(transicionEClass, TRANSICION__ANTERIOR);
-		createEReference(transicionEClass, TRANSICION__SIGUIRNTE);
 	}
 
 	/**
@@ -471,15 +429,6 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 				!IS_ORDERED);
 
 		initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransicion_Anterior(), this.getEstado(), null, "anterior", null, 0, 1, Transicion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransicion_Siguirnte(), this.getEstado(), null, "siguirnte", null, 0, 1, Transicion.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

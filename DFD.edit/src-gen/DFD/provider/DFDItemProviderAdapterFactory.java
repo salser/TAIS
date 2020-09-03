@@ -188,29 +188,6 @@ public class DFDItemProviderAdapterFactory extends DFDAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link DFD.Transicion} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TransicionItemProvider transicionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link DFD.Transicion}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTransicionAdapter() {
-		if (transicionItemProvider == null) {
-			transicionItemProvider = new TransicionItemProvider(this);
-		}
-
-		return transicionItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -325,8 +302,6 @@ public class DFDItemProviderAdapterFactory extends DFDAdapterFactory
 			proveedorItemProvider.dispose();
 		if (estadoItemProvider != null)
 			estadoItemProvider.dispose();
-		if (transicionItemProvider != null)
-			transicionItemProvider.dispose();
 	}
 
 }

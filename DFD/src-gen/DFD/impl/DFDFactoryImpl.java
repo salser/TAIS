@@ -65,8 +65,6 @@ public class DFDFactoryImpl extends EFactoryImpl implements DFDFactory {
 			return createProveedor();
 		case DFDPackage.ESTADO:
 			return createEstado();
-		case DFDPackage.TRANSICION:
-			return createTransicion();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,17 +123,6 @@ public class DFDFactoryImpl extends EFactoryImpl implements DFDFactory {
 	public Estado createEstado() {
 		EstadoImpl estado = new EstadoImpl();
 		return estado;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Transicion createTransicion() {
-		TransicionImpl transicion = new TransicionImpl();
-		return transicion;
 	}
 
 	/**

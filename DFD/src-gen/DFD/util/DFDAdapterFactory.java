@@ -92,11 +92,6 @@ public class DFDAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTransicion(Transicion object) {
-			return createTransicionAdapter();
-		}
-
-		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -182,20 +177,6 @@ public class DFDAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEstadoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link DFD.Transicion <em>Transicion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see DFD.Transicion
-	 * @generated
-	 */
-	public Adapter createTransicionAdapter() {
 		return null;
 	}
 

@@ -37,8 +37,4 @@
         changeable="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Estado"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Transicion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="anterior" eType="#//Estado"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="siguirnte" eType="#//Estado"/>
-  </eClassifiers>
 </ecore:EPackage>

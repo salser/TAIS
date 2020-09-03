@@ -29,9 +29,5 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DFD.ecore#//Proveedor/nombre"/>
     </genClasses>
     <genClasses ecoreClass="DFD.ecore#//Estado"/>
-    <genClasses ecoreClass="DFD.ecore#//Transicion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DFD.ecore#//Transicion/anterior"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DFD.ecore#//Transicion/siguirnte"/>
-    </genClasses>
   </genPackages>
 </genmodel:GenModel>

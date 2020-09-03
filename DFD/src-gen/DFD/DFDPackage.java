@@ -305,52 +305,6 @@ public interface DFDPackage extends EPackage {
 	int ESTADO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link DFD.impl.TransicionImpl <em>Transicion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see DFD.impl.TransicionImpl
-	 * @see DFD.impl.DFDPackageImpl#getTransicion()
-	 * @generated
-	 */
-	int TRANSICION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Anterior</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSICION__ANTERIOR = 0;
-
-	/**
-	 * The feature id for the '<em><b>Siguirnte</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSICION__SIGUIRNTE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Transicion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSICION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Transicion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSICION_OPERATION_COUNT = 0;
-
-	/**
 	 * Returns the meta object for class '{@link DFD.Cliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -533,38 +487,6 @@ public interface DFDPackage extends EPackage {
 	EClass getEstado();
 
 	/**
-	 * Returns the meta object for class '{@link DFD.Transicion <em>Transicion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transicion</em>'.
-	 * @see DFD.Transicion
-	 * @generated
-	 */
-	EClass getTransicion();
-
-	/**
-	 * Returns the meta object for the reference '{@link DFD.Transicion#getAnterior <em>Anterior</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Anterior</em>'.
-	 * @see DFD.Transicion#getAnterior()
-	 * @see #getTransicion()
-	 * @generated
-	 */
-	EReference getTransicion_Anterior();
-
-	/**
-	 * Returns the meta object for the reference '{@link DFD.Transicion#getSiguirnte <em>Siguirnte</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Siguirnte</em>'.
-	 * @see DFD.Transicion#getSiguirnte()
-	 * @see #getTransicion()
-	 * @generated
-	 */
-	EReference getTransicion_Siguirnte();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -732,32 +654,6 @@ public interface DFDPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ESTADO = eINSTANCE.getEstado();
-
-		/**
-		 * The meta object literal for the '{@link DFD.impl.TransicionImpl <em>Transicion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see DFD.impl.TransicionImpl
-		 * @see DFD.impl.DFDPackageImpl#getTransicion()
-		 * @generated
-		 */
-		EClass TRANSICION = eINSTANCE.getTransicion();
-
-		/**
-		 * The meta object literal for the '<em><b>Anterior</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSICION__ANTERIOR = eINSTANCE.getTransicion_Anterior();
-
-		/**
-		 * The meta object literal for the '<em><b>Siguirnte</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSICION__SIGUIRNTE = eINSTANCE.getTransicion_Siguirnte();
 
 	}
 
