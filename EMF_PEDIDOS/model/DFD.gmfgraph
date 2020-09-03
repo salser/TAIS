@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="DFD">
+  <figures name="Default">
+    <descriptors name="PedidoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="PedidoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="PedidoLabelFigure" text="Pedido"/>
+      </actualFigure>
+      <accessors accessor="getFigurePedidoLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ArticuloFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ArticuloFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ArticuloLabelFigure" text="Articulo"/>
+      </actualFigure>
+      <accessors accessor="getFigureArticuloLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+  </figures>
+  <nodes name="Pedido" figure="PedidoFigure"/>
+  <nodes name="Articulo" figure="ArticuloFigure"/>
+  <labels name="PedidoLabel" figure="PedidoFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="ArticuloLabel" figure="ArticuloFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+</gmfgraph:Canvas>

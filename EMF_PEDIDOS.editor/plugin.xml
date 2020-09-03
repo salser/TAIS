@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated DFD -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="DFD.presentation.DFDModelWizardID"
+            name="%_UI_DFDModelWizard_label"
+            class="DFD.presentation.DFDModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DFDModelFile.gif">
+         <description>%_UI_DFDModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated DFD -->
+      <editor
+            id="DFD.presentation.DFDEditorID"
+            name="%_UI_DFDEditor_label"
+            icon="icons/full/obj16/DFDModelFile.gif"
+            extensions="dfd"
+            class="DFD.presentation.DFDEditor"
+            contributorClass="DFD.presentation.DFDActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
