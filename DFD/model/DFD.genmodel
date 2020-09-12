@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/DFD/src-gen" creationIcons="false" editDirectory="/DFD.edit/src-gen"
+    editorDirectory="/DFD.editor/src-gen" modelPluginID="DFD" modelName="DFD" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>DFD.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="DFD" disposableProviderFactory="true" ecorePackage="DFD.ecore#/">
+    <genClasses ecoreClass="DFD.ecore#//Proceso">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//Proceso/flujo"/>
+    </genClasses>
+    <genClasses ecoreClass="DFD.ecore#//EntidadExterna">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DFD.ecore#//EntidadExterna/proceso"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//EntidadExterna/flujo"/>
+    </genClasses>
+    <genClasses ecoreClass="DFD.ecore#//Flujo"/>
+    <genClasses ecoreClass="DFD.ecore#//Almacen">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DFD.ecore#//Almacen/proceso"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//Almacen/flujo"/>
+    </genClasses>
+    <genClasses ecoreClass="DFD.ecore#//DFD">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//DFD/flujo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//DFD/entidadexterna"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//DFD/almacen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DFD.ecore#//DFD/proceso"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
