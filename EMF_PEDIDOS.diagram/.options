@@ -1,7 +1,0 @@
-# Tracing options for the EMF_PEDIDOS.diagram plug-in
-
-# Common issues
-EMF_PEDIDOS.diagram/debug=false
-
-# Visual IDs
-EMF_PEDIDOS.diagram/debug/visualID=false

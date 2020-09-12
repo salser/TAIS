@@ -1,2 +1,0 @@
-# TAIS
-Project and classwork
