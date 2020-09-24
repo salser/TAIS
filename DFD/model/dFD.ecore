@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dFD" nsURI="http://www.example.org/dFD" nsPrefix="dFD">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dFD" nsURI="http://javeriana.edu.co/dFD" nsPrefix="dFD">
   <eClassifiers xsi:type="ecore:EClass" name="Proceso" eSuperTypes="#//Elemento"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadExterna" eSuperTypes="#//Elemento"/>
   <eClassifiers xsi:type="ecore:EClass" name="DFD">
