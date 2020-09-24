@@ -1,0 +1,30 @@
+@namespace(uri="http://javeriana.edu.co/dFD", prefix="dFD")
+package dFD;
+
+class Proceso extends Elemento {
+}
+
+class EntidadExterna extends Elemento {
+}
+
+@gmf.diagram
+class DFD {
+	val Flujo[*] flujo;
+	val Elemento[*] elemento;
+}
+
+class Almacen extends Elemento {
+}
+
+@gmf.node(label="nombre")
+abstract class Elemento {
+	attr String nombre;
+}
+
+@gmf.link(source="anterior", target="siguiente", label="nombre")
+class Flujo {
+	attr String nombre;
+	ref Elemento anterior;
+	ref Elemento siguiente;
+}
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="dFD">
+  <figures name="Default">
+    <descriptors name="ProcesoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ProcesoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ProcesoLabelFigure" text="Proceso"/>
+      </actualFigure>
+      <accessors accessor="getFigureProcesoLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EntidadExternaFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EntidadExternaFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EntidadExternaLabelFigure" text="EntidadExterna"/>
+      </actualFigure>
+      <accessors accessor="getFigureEntidadExternaLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AlmacenFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AlmacenFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AlmacenLabelFigure" text="Almacen"/>
+      </actualFigure>
+      <accessors accessor="getFigureAlmacenLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="FlujoFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="FlujoFigure"/>
+    </descriptors>
+    <descriptors name="FlujoLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="FlujoLabelLabel" text="Flujo"/>
+    </descriptors>
+  </figures>
+  <nodes name="Proceso" figure="ProcesoFigure"/>
+  <nodes name="EntidadExterna" figure="EntidadExternaFigure"/>
+  <nodes name="Almacen" figure="AlmacenFigure"/>
+  <connections name="Flujo" figure="FlujoFigure"/>
+  <labels name="ProcesoLabel" figure="ProcesoFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="EntidadExternaLabel" figure="EntidadExternaFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AlmacenLabel" figure="AlmacenFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="FlujoLabel" figure="FlujoLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>
