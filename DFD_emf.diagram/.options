@@ -1,7 +1,0 @@
-# Tracing options for the DFD_emf.diagram plug-in
-
-# Common issues
-DFD_emf.diagram/debug=false
-
-# Visual IDs
-DFD_emf.diagram/debug/visualID=false
