@@ -1,0 +1,30 @@
+@namespace(uri="http://www.example.org/dFD", prefix="dFD")
+package dFD;
+
+class Almacen extends Elemento {
+}
+
+@gmf.link(source="anterior", target="siguiente", label="nombre" )
+class Flujo {
+	attr String nombre;
+	ref Elemento anterior;
+	ref Elemento siguiente;
+}
+
+class Proceso extends Elemento {
+}
+
+class EntidadExterna extends Elemento {
+}
+
+@gmf.diagram
+class DFD {
+	val Flujo[*] flujo;
+	val Elemento[*] elemento;
+}
+
+@gmf.node(label="nombre")
+abstract class Elemento {
+	!unique attr String nombre;
+}
+
