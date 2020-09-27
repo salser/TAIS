@@ -1,0 +1,43 @@
+grammar co.edu.javeriana.dfd.DFD with org.eclipse.xtext.common.Terminals
+
+generate dFD "http://www.edu.co/javeriana/dfd/DFD"
+
+DFD returns DFD:
+	{DFD}
+	'DFD'
+	'{'
+		('flujo' '{' flujo+=Flujo ( "," flujo+=Flujo)* '}' )?
+		('elemento' '{' elemento+=Elemento ( "," elemento+=Elemento)* '}' )?
+	'}';
+
+
+Elemento returns Elemento:
+	Proceso | EntidadExterna | Almacen;
+
+Flujo returns Flujo:
+	{Flujo}
+	'Flujo'
+	name=EString
+	'{'
+		'anterior' anterior=EString
+		'nombre' nombre=EString
+		'siguiente' siguiente=EString
+	'}';
+
+EString returns EString:
+	{EString} STRING | {EString} ID;
+
+Proceso returns Proceso:
+	{Proceso}
+	'Proceso'
+	name=EString;
+
+EntidadExterna returns EntidadExterna:
+	{EntidadExterna}
+	'EntidadExterna'
+	name=EString;
+
+Almacen returns Almacen:
+	{Almacen}
+	'Almacen'
+	name=EString;

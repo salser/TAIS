@@ -3,9 +3,9 @@
 	<section name="ImportExportAction">
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ecoretools.emf.design.wizardID"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.xtext.xtext.ui.wizard.project.NewXtextProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.xtext.projectwiz"/>
 		</list>
 	</section>
 </section>
