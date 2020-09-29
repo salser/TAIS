@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module generate('http://javeriana.edu.co/dFD')]
+
+
+[template public generateElement(aDFD : DFD)]
+[comment @main/]
+[file ('Tienda.java', false, 'UTF-8')]
+package com.example.restservice;
+
+public class Greeting {
+
+	private final long id;
+	private final String content;
+
+	public Greeting(long id, String content) {
+		this.id = id;
+		this.content = content;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+}
+
+[/file]
+
+[comment @main /]
+[file ('Servicio.java', false, 'UTF-8')]
+	
+[/file]
+[/template]
