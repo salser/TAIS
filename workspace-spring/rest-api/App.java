@@ -9,25 +9,41 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pruebas.model.Almacen;
-import com.pruebas.repository.AlmacenRepository;
+import com.pruebas.model.Proceso;
+import com.pruebas.repository.ProcesoRepository;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/almacen")
-public class AlmacenController {
+public class App {
 
 	@Autowired(required = true)
-	AlmacenRepository repository;
+	ProcesoRepository repository;
 
 	@GetMapping("")
-	public Iterable<Almacen> getAlmacen() {
+	public Iterable<Proceso> getProceso() {
 		return repository.findAll();
 	}
 
 	@GetMapping("{id}")
-	public Optional<Almacen> getAlmacenId(@PathVariable Long id) {
+	public Optional<Proceso> getProcesoId(@PathVariable Long id) {
 		return repository.findById(id);
 	}
+
+
+
+	
+//Almacen
+
+
+
+
+
+
+	
+//Proceso
+
+
+
 
 }

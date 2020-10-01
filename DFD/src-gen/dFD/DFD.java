@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link dFD.DFD#getFlujo <em>Flujo</em>}</li>
  *   <li>{@link dFD.DFD#getElemento <em>Elemento</em>}</li>
+ *   <li>{@link dFD.DFD#getNombre <em>Nombre</em>}</li>
  * </ul>
  *
  * @see dFD.DFDPackage#getDFD()
@@ -47,5 +48,27 @@ public interface DFD extends EObject {
 	 * @generated
 	 */
 	EList<Elemento> getElemento();
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see dFD.DFDPackage#getDFD_Nombre()
+	 * @model
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link dFD.DFD#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
 
 } // DFD

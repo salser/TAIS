@@ -9,6 +9,7 @@ import dFD.Flujo;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -31,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link dFD.impl.DFDImpl#getFlujo <em>Flujo</em>}</li>
  *   <li>{@link dFD.impl.DFDImpl#getElemento <em>Elemento</em>}</li>
+ *   <li>{@link dFD.impl.DFDImpl#getNombre <em>Nombre</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +58,26 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 	 * @ordered
 	 */
 	protected EList<Elemento> elemento;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,6 +130,29 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 	 * @generated
 	 */
 	@Override
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DFDPackage.DFD__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case DFDPackage.DFD__FLUJO:
@@ -129,6 +175,8 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 			return getFlujo();
 		case DFDPackage.DFD__ELEMENTO:
 			return getElemento();
+		case DFDPackage.DFD__NOMBRE:
+			return getNombre();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,6 +198,9 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 			getElemento().clear();
 			getElemento().addAll((Collection<? extends Elemento>) newValue);
 			return;
+		case DFDPackage.DFD__NOMBRE:
+			setNombre((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -168,6 +219,9 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 		case DFDPackage.DFD__ELEMENTO:
 			getElemento().clear();
 			return;
+		case DFDPackage.DFD__NOMBRE:
+			setNombre(NOMBRE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -184,8 +238,27 @@ public class DFDImpl extends MinimalEObjectImpl.Container implements DFD {
 			return flujo != null && !flujo.isEmpty();
 		case DFDPackage.DFD__ELEMENTO:
 			return elemento != null && !elemento.isEmpty();
+		case DFDPackage.DFD__NOMBRE:
+			return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nombre: ");
+		result.append(nombre);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DFDImpl

@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dFD:DFD xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:dFD="http://javeriana.edu.co/dFD" xsi:schemaLocation="http://javeriana.edu.co/dFD dFD.ecore"/>
+<dFD:DFD xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dFD="http://javeriana.edu.co/dFD"
+    xsi:schemaLocation="http://javeriana.edu.co/dFD dFD.ecore"
+    nombre="Tienda">
+  <flujo nombre="alistarProductos"
+      anterior="//@elemento.2"
+      siguiente="//@elemento.1"/>
+  <flujo nombre="registrarInventario"
+      anterior="//@elemento.1"
+      siguiente="//@elemento.0"/>
+  <elemento
+      xsi:type="dFD:Almacen"
+      nombre="Inventario"/>
+  <elemento
+      xsi:type="dFD:Almacen"
+      nombre="Producto"/>
+  <elemento
+      xsi:type="dFD:Proceso"
+      nombre="TenderoAlista"/>
+</dFD:DFD>

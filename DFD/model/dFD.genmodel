@@ -13,6 +13,7 @@
     <genClasses ecoreClass="dFD.ecore#//DFD">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dFD.ecore#//DFD/flujo"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dFD.ecore#//DFD/elemento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dFD.ecore#//DFD/nombre"/>
     </genClasses>
     <genClasses ecoreClass="dFD.ecore#//Almacen"/>
     <genClasses ecoreClass="dFD.ecore#//Elemento">

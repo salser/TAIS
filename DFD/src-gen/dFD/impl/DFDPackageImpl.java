@@ -186,6 +186,16 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDFD_Nombre() {
+		return (EAttribute) dfdEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAlmacen() {
 		return almacenEClass;
 	}
@@ -287,6 +297,7 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 		dfdEClass = createEClass(DFD);
 		createEReference(dfdEClass, DFD__FLUJO);
 		createEReference(dfdEClass, DFD__ELEMENTO);
+		createEAttribute(dfdEClass, DFD__NOMBRE);
 
 		almacenEClass = createEClass(ALMACEN);
 
@@ -345,6 +356,8 @@ public class DFDPackageImpl extends EPackageImpl implements DFDPackage {
 		initEReference(getDFD_Elemento(), this.getElemento(), null, "elemento", null, 0, -1, dFD.DFD.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDFD_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, dFD.DFD.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(almacenEClass, Almacen.class, "Almacen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

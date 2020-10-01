@@ -196,13 +196,22 @@ public interface DFDPackage extends EPackage {
 	int DFD__ELEMENTO = 1;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DFD__NOMBRE = 2;
+
+	/**
 	 * The number of structural features of the '<em>DFD</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DFD_FEATURE_COUNT = 2;
+	int DFD_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>DFD</em>' class.
@@ -358,6 +367,17 @@ public interface DFDPackage extends EPackage {
 	EReference getDFD_Elemento();
 
 	/**
+	 * Returns the meta object for the attribute '{@link dFD.DFD#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see dFD.DFD#getNombre()
+	 * @see #getDFD()
+	 * @generated
+	 */
+	EAttribute getDFD_Nombre();
+
+	/**
 	 * Returns the meta object for class '{@link dFD.Almacen <em>Almacen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -499,6 +519,14 @@ public interface DFDPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DFD__ELEMENTO = eINSTANCE.getDFD_Elemento();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DFD__NOMBRE = eINSTANCE.getDFD_Nombre();
 
 		/**
 		 * The meta object literal for the '{@link dFD.impl.AlmacenImpl <em>Almacen</em>}' class.

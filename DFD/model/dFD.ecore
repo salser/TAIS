@@ -8,6 +8,7 @@
         eType="#//Flujo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemento" upperBound="-1"
         eType="#//Elemento" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Almacen" eSuperTypes="#//Elemento"/>
   <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true">

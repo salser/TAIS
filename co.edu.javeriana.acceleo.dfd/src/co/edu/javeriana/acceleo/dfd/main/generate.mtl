@@ -1,0 +1,142 @@
+[comment encoding = UTF-8 /]
+[module generate('http://javeriana.edu.co/dFD')]
+
+
+[template public generateElement(dfd : DFD)]
+[comment @main/]
+[file ('src/main/java/com/pruebas/model/Elemento.java', false, 'UTF-8')]
+
+package com.pruebas.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Elemento {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	private String nombre;
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+}
+
+
+[/file]
+
+[for (el : Elemento | dfd.elemento)]
+
+[if (el.eClass().name.equalsIgnoreCase('almacen'))]
+[file ('src/main/java/com/pruebas/controller/'+el.nombre+'Controller.java', false, 'UTF-8')]
+package com.pruebas.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pruebas.model.[el.nombre/];
+import com.pruebas.repository.[el.nombre/]Repository;
+
+@CrossOrigin(origins = "*", maxAge = 3600)
+@RestController
+@RequestMapping("/[el.nombre.toLower()/]")
+public class [el.nombre/]Controller {
+
+	@Autowired(required = true)
+	[el.nombre/]Repository repository;
+
+	@GetMapping("")
+	public String test() {
+		return "{result: "+repository.count()+"}";
+	}
+
+
+}
+[/file]
+
+[file ('src/main/java/com/pruebas/model/'+el.nombre+'.java', false, 'UTF-8')]
+package com.pruebas.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class [el.nombre/] extends Elemento {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+}
+[/file]
+
+[file ('src/main/java/com/pruebas/repository/'+ el.nombre +'Repository.java', false, 'UTF-8')]
+package com.pruebas.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.pruebas.model.[el.nombre/];
+
+public interface [el.nombre/]Repository extends CrudRepository<[el.nombre/], Long> {
+
+}
+[/file]
+
+	
+[/if]
+	
+
+
+
+
+[/for]
+
+[/template]
+
